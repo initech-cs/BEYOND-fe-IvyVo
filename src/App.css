@@ -1,10 +1,18 @@
 .App {
-  text-align: center;
+  
+  background-color: black;
+  height: 100vh;
 }
 
 .App-logo {
   height: 40vmin;
   pointer-events: none;
+}
+
+h1{
+  margin-top: 0px;
+  font-size: 30px;
+  color: white;
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -35,4 +43,58 @@
   to {
     transform: rotate(360deg);
   }
+  
 }
+
+.user-login{
+  padding: 20px;
+  padding-bottom: 5px;
+  display: flex;
+  justify-content: end;
+ 
+}
+
+.breadcrumbs{
+  display: flex;
+  justify-content: space-between;
+  
+}
+
+.signing-up{
+  height: 150px;
+  background-color: #a18edd;
+  color: white;
+  padding: 20px;
+
+}
+
+.search{
+  border: none;
+}
+
+.footer{
+  height: 80px;
+  background-color: black;
+  color: white;
+}
+
+.btn{
+  background-color: transparent !important;
+  border: 2px solid white !important;
+  font-size: 20px !important;
+  color: white;
+  padding: 10px 10px !important;
+}
+
+.artistpage{
+  background-color: black;
+  height: 100vh;
+}
+
+.shopnow{
+  height: 100vh;
+  display:flex;
+  justify-content: center;
+  background-color: teal;
+}
+

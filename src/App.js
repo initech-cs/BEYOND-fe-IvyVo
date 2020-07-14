@@ -1,24 +1,46 @@
 import React from 'react';
-import logo from './logo.svg';
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import {Artist, Cart, Events,Genres, LandingPage,Shop,User} from './pages'
 import './App.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
+
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Router>
+        <Switch>
+            <Route exact={true} path="/">
+              <LandingPage/>
+            </Route>
+
+            <Route exact={true} path="/cart">
+              <Cart/>
+            </Route>
+
+            <Route exact={true} path="/user">
+              <User/>
+            </Route>
+
+            <Route exact={true} path="/events">
+              <Events/>
+            </Route>
+
+            <Route exact={true} path="/explore">
+              <Genres/>
+            </Route>
+
+            <Route exact={true} path="/artists">
+              <Artist/>
+            </Route>
+
+            <Route exact={true} path="/shop">
+              <Shop/>
+            </Route>
+
+
+        </Switch>
+      </Router>
     </div>
   );
 }
