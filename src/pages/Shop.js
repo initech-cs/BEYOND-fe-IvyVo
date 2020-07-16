@@ -7,8 +7,7 @@ const Shop = () => {
         <Navigationbar/>
         BUY SOMETHING
         <SigningUp/>
-        <Footer/>
-            
+        <Footer/>         
         </div>
     )
 }

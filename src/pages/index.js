@@ -4,7 +4,9 @@ import Events from './Events'
 import Genres from './Genres'
 import LandingPage from './LandingPage'
 import Shop from './Shop'
-import User from './User'
+import Login from './Login'
+import ArtistDetail from './ArtistDetail'
+import Profile from './Profile'
 
 export {
     Artist,
@@ -13,5 +15,7 @@ export {
     Genres,
     LandingPage,
     Shop,
-    User,
+    Login,
+    ArtistDetail,
+    Profile
 }

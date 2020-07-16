@@ -89,6 +89,7 @@ h1{
 .artistpage{
   background-color: black;
   height: 100vh;
+  padding: 0px 20px;
 }
 
 .shopnow{
@@ -98,3 +99,17 @@ h1{
   background-color: teal;
 }
 
+.text-field{
+  color: white;
+}
+
+
+.ivy{
+  background-image: url(https://64.media.tumblr.com/1af267c99b6c3532da03af76c0f769a9/tumblr_ps5xe014vS1w2ypcro1_400.gifv);
+  background-size: 100vw;
+  height:100vh;
+}
+
+.TextField{
+  color: white
+}

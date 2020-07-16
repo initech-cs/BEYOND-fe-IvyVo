@@ -4,9 +4,12 @@ import {Navigationbar,SigningUp,Footer,ShopNow,Jumbotron} from '../components'
 const LandingPage = () => {
     return (
         <div>
-            <Navigationbar/>
-        
-            <Jumbotron/>
+            <div className="ivy">
+                <Navigationbar/>
+                {/* <Jumbotron/> */}
+
+            </div>
+           
             <ShopNow/>
             <SigningUp/>
             <Footer/>
