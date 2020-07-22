@@ -5,7 +5,7 @@ const Shop = () => {
     return (
         <div>
         <Navigationbar/>
-        BUY SOMETHING
+         <div className="artistpage"></div>
         <SigningUp/>
         <Footer/>         
         </div>

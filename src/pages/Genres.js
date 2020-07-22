@@ -9,8 +9,8 @@ import Artist from './Artist'
 const Genres = () => {
     let [genres, setGenres] = useState([])
     let [genre, setGenre] = useState(null)
+  
     let history = useHistory()
-
 
 
     useEffect(() => {
@@ -23,22 +23,35 @@ const Genres = () => {
 
     }, []);
 
+    const toggleSortZ = () => {
+        let newgenres = genres.reverse().slice() // slice to go back to the begining state??????
+        console.log(newgenres)
+        setGenres(newgenres)
+    }
+
     return (
         <div>
             <Navigationbar />
-            <div>
+            <div className="artistpage body">
                 <Row>
-
-                    <Col md={4}>
-                        {genres.map(element => <div style={{ margin: "5px" }}><h5><div onClick={() => setGenre(element)} style={{ color: "white" }}>{element.genre}</div></h5></div>)}
-                    </Col>
-                    <Col md={8}>
-                        {genre ? <GenresDetail genre={genre} /> : <></>}
-
-                    </Col>
-
+                    <div className="filtered-city tinytext">
+                        <div style={{ fontWeight: "bolder" }} >FILTERED BY NAME <i class="fal fa-filter"></i></div>
+                        <div className="d-flex">
+                            <div className="city" onClick={()=> toggleSortZ()}>A → Z</div>
+                            <div className="city" onClick={() => toggleSortZ()}>Z → A</div>
+                        </div>
+                    </div>
                 </Row>
 
+                <Row>
+                    <Col md={2}>
+                        {genres.map(element => <div className="" style={{ margin: "5px" }}><h4 onClick={() => setGenre(element)} style={{ color: "white" }} className="artist-title-list">{element.genre.toUpperCase()}</h4></div>)}
+                    </Col>
+                    <Col style={{ padding: "0px" }} md={3}></Col>
+                    <Col md={7}>
+                        {genre ? <GenresDetail genre={genre} /> : <></>}
+                    </Col>
+                </Row>
             </div>
 
             <SigningUp />

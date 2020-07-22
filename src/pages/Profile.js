@@ -1,19 +1,48 @@
-import React, {useEffect} from 'react'
-import {Navigationbar,SigningUp,Footer,ShopNow,Jumbotron} from '../components'
-import axios from 'axios'
-import {useSelector} from 'react-redux'
+import React from 'react'
+import { Navigationbar, SigningUp, Footer, ShopNow, Jumbotron } from '../components'
+import { useHistory } from 'react-router-dom'
+import { useSelector, useDispatch } from 'react-redux'
+import { logout } from '../redux/actions/userAction'
 
 
 const Profile = () => {
-
-    const user = useSelector(s=>s.user)
+  
+    const user = useSelector(s => s.user)
+    const dispatch = useDispatch()
     console.log(user)
+
+    const goout = () => {
+        dispatch(logout())
+    }
+
     return (
         <div>
-            <Navigationbar/>
-            <h1 style={{color:"white"}}>{user.user.name}</h1>
-            <SigningUp/>
-            <Footer/>
+            <Navigationbar />
+            <div className="loginpage body">
+                <div>
+                    <div className="tinytext">NAME</div>
+                    <h1 style={{ color: "white" }}>{user.user.name}</h1>
+                </div>
+
+                <div>
+                    <div className="tinytext">EMAIL</div>
+                    <h1 style={{ color: "white" }}>{user.user.email}</h1>
+
+
+                </div>
+                <button className="tinytext" onClick={() => goout()}></button>
+                <div>
+                    {user.isAdmin
+                        ? <div className="tinytext">ADMIN</div>
+                        : <div className="tinytext">USER</div>
+                    }
+                    <h1><i class="fal fa-sign-out 5x" ></i></h1>
+                </div>
+
+
+            </div>
+            <SigningUp />
+            <Footer />
         </div>
     )
 }

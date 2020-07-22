@@ -7,6 +7,11 @@ import Shop from './Shop'
 import Login from './Login'
 import ArtistDetail from './ArtistDetail'
 import Profile from './Profile'
+import EventDetail from './EventDetail'
+import UpdateEvent from './UpdateEvent'
+import NewEvent from './NewEvent'
+
+
 
 export {
     Artist,
@@ -17,5 +22,8 @@ export {
     Shop,
     Login,
     ArtistDetail,
-    Profile
+    Profile,
+    EventDetail, 
+    UpdateEvent,
+    NewEvent
 }

@@ -4,7 +4,10 @@ import SigningUp from './SigningUp'
 import ShopNow from './ShopNow'
 import Jumbotron from './Jumbotron'
 import GenresDetail from './GenresDetail'
-
+import SignUpTab from './SignUpTab'
+import LoginTab from './LoginTab'
+import Loading from './Loading'
+import PageLink from './PageLink'
 
 export {
     Footer, 
@@ -12,5 +15,9 @@ export {
     SigningUp,
     ShopNow,
     Jumbotron,
-    GenresDetail
+    GenresDetail,
+    SignUpTab,
+    LoginTab, 
+    Loading,
+    PageLink
 }

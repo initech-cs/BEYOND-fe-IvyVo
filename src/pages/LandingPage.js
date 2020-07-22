@@ -1,18 +1,26 @@
 import React from 'react'
 import {Navigationbar,SigningUp,Footer,ShopNow,Jumbotron} from '../components'
+import '../App.css'
 
 const LandingPage = () => {
     return (
-        <div>
+        <div className="body">
             <div className="ivy">
-                <Navigationbar/>
-                {/* <Jumbotron/> */}
-
             </div>
-           
-            <ShopNow/>
+            
+          
+           <ShopNow/>
+           <div className="lastpage" style={{backgroundColor:""}}>
+               <div className="cucmauxanh"></div>
             <SigningUp/>
+
             <Footer/>
+
+
+           </div>
+           
+        
+          
         </div>
     )
 }

@@ -1,13 +1,13 @@
 const init = {
-    isAuthenticated: false
+    isAuthenticated: false,
+    isAdmin: false,
+    user: null
 }
-
 
 export default function(state=init, {type,payload}){
     switch (type){
         case "LOGIN":
-            console.log("hahahhahaha")
-            return { ...state, isAuthenticated:true, user:payload}
+            return { ...state, isAuthenticated:true, isAdmin: payload.role == "admin", user:payload}
         case "LOGOUT":
             return {...init}
         default :
