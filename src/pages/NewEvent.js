@@ -221,7 +221,7 @@ const NewEvent = () => {
                         <textarea
                             placeholder="posterURL"
                             className="searchbar"
-                            type="type"
+                            type="file"
                             name="posterURL"
                             value={posterURL}
                             onChange={(e) => setPosterURL(e.target.value)} />
