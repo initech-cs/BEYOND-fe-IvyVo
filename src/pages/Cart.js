@@ -18,7 +18,7 @@ const Cart = () => {
 
     const checkCart = async () => {
         const token = localStorage.getItem("token")
-        const res = await axios.get("http://localhost:5000/cart", {
+        const res = await axios.get("https://beyond-be.herokuapp.com/cart", {
             headers: {
                 authorization: `Bearer ${token}`
             }

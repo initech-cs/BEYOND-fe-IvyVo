@@ -14,7 +14,7 @@ export default function LoginTab() {
 
     const loginABC = async (e) => {
         e.preventDefault();
-        const res = await axios.post("http://localhost:5000/auth/login", { email: userEmail, password: userPassword }, {
+        const res = await axios.post("https://beyond-be.herokuapp.com/auth/login", { email: userEmail, password: userPassword }, {
             method: "POST"
         });
         const { user, token } = res.data.data;

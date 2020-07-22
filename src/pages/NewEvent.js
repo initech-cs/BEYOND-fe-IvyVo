@@ -49,7 +49,7 @@ const NewEvent = () => {
             minimumAge
         };
 
-        const newEvent = await fetch("http://localhost:5000/events", {
+        const newEvent = await fetch("https://beyond-be.herokuapp.com/events", {
             method: "POST",
             headers: {
                 authorization: `Bearer ${token}`,

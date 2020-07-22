@@ -1,6 +1,6 @@
 
 const loginWithEmail = (email, password)=> async dispatch =>{
-    const res = await fetch(`http://localhost:5000/auth/login`,{
+    const res = await fetch(`https://beyond-be.herokuapp.com/auth/login`,{
         method: "POST",
         headers:{
             "content-type": "apoolication/json"
@@ -18,7 +18,7 @@ const loginWithEmail = (email, password)=> async dispatch =>{
 
 
 const logout = () => async dispatch => {
-    const res = await fetch('http://localhost:5000/auth/logout',{
+    const res = await fetch('https://beyond-be.herokuapp.com/auth/logout',{
         headers:{
             authorization: `Bearer ${localStorage.getItem('token')}`
         }

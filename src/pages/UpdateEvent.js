@@ -52,7 +52,7 @@ const UpdateEvent = (props) => {
             minimumAge
         };
 
-        const updatedEvent = await fetch(`http://localhost:5000/events/${eventId}`, {
+        const updatedEvent = await fetch(`https://beyond-be.herokuapp.com/events/${eventId}`, {
             method: "PUT",
             headers: {
                 authorization: `Bearer ${token}`,

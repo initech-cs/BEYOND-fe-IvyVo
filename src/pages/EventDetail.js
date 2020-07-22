@@ -24,7 +24,7 @@ const EventDetail = (props) => {
     useEffect(() => {
         dispatch({ type: "LOADING" })
         console.log("id is", eventId)
-        axios.get(`http://localhost:5000/events/${eventId}`).then((res) => {
+        axios.get(`https://beyond-be.herokuapp.com/events/${eventId}`).then((res) => {
             console.log("single event data is", res.data)
             setEventDetail(res.data.data)
             dispatch({ type: "LOADED" })

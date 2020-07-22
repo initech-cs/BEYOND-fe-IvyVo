@@ -7,7 +7,7 @@ const GenresDetail = (props) => {
     let history = useHistory()
 
     useEffect(() => {
-            axios.get(`http://localhost:5000/artists/genres/${props.genre.code}`).then((res) => {
+            axios.get(`https://beyond-be.herokuapp.com/artists/genres/${props.genre.code}`).then((res) => {
                 console.log("artistList", res.data)
                 setArtistList(res.data.data)
             })

@@ -16,7 +16,7 @@ const User = () => {
 
    
     const logout = async () =>{
-        const res = await fetch(`https://localhost:5000/auth/logout`,{
+        const res = await fetch(`https://beyond-be.herokuapp.com/auth/logout`,{
             headers :{
                 authorization: `Bearer ${token}`,
             }

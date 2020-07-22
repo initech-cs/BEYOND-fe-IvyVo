@@ -15,7 +15,7 @@ const Genres = () => {
 
     useEffect(() => {
         if (genres.length == 0) {
-            axios.get("http://localhost:5000/genres").then((res) => {
+            axios.get("https://beyond-be.herokuapp.com/genres").then((res) => {
                 console.log("genres", res.data.data)
                 setGenres(res.data.data)
             }, [])
